@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            var confirmEmail = document.getElementById("confirmEmail").value;
+            if (email !== confirmEmail) {
+                alert("Email addresses do not match!");
+                return false;
+            } else {
+                alert("Message sent! We will get back to you.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Cities</a>
+                <ul>
+                    <li><a href="austin.html">Austin</a></li>
+                    <li><a href="dallas.html">Dallas</a></li>
+                    <li><a href="houston.html">Houston</a></li>
+                </ul>
+            </li>
+            <li><a href="https://en.wikipedia.org/wiki/Texas" target="_blank">More about Texas</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Get in Touch</h2>
+        <form onsubmit="return validateEmail()">
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Your first name" required><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Your last name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required><br>
+            <label for="confirmEmail">Confirm Email:</label>
+            <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Confirm your email" required><br>
+
+            <label for="question">Your Question:</label>
+            <textarea id="question" name="question" placeholder="Ask your question here" required></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</body>
+</html>
