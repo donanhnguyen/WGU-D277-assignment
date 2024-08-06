@@ -19,15 +19,12 @@
     </script>
 </head>
 <body>
-    <header>
-        <h1>Contact Us</h1>
-    </header>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li>
+            <li class="city-nav">
                 <a href="#">Cities</a>
-                <ul>
+                <ul class="cities-bar">
                     <li><a href="austin.html">Austin</a></li>
                     <li><a href="dallas.html">Dallas</a></li>
                     <li><a href="houston.html">Houston</a></li>
@@ -37,6 +34,9 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
     <section>
         <h2>Get in Touch</h2>
         <form onsubmit="return validateEmail()">
@@ -56,5 +56,12 @@
             <input type="submit" value="Submit">
         </form>
     </section>
+    <aside class='side-content'>
+        <img src="texas.jpg" alt="Texas Flag" style="width: 100%;">
+        <h3>State Office Address:</h3>
+        <p>1234 Texas St.</p>
+        <p>Austin, TX 78000</p>
+        <p>512-555-5555</p>
+    </aside>
 </body>
 </html>
